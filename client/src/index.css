@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #0a192f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0c2344c6;
+  border-radius: 10px;
+}
+
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  color: white;
+}
+
+/* Loader animation */
+.r {
+  animation: r 1s infinite;
+}
+@keyframes r {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.o {
+  animation: o 1s infinite;
+}
+@keyframes o {
+  0% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.c {
+  animation: c 1s infinite;
+}
+@keyframes c {
+  0% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.k {
+  animation: k 1s infinite;
+}
+@keyframes k {
+  0% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.y {
+  animation: y 1s infinite;
+}
+@keyframes y {
+  0% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#tsparticles {
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Input field */
+input,
+textarea {
+  height: 40px;
+  border: 1px solid grey;
+  width: 100%;
+  padding-left: 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(65, 59, 59);
+}
+
+textarea {
+  height: 100px;
+  padding-top: 10px;
+}
