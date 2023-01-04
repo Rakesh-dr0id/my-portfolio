@@ -12,16 +12,19 @@ const port = process.env.PORT || 5001;
 
 const path = require('path');
 
-if (process.env.NODE_ENV === 'production') {
-  //*Set static folder up in production
-  app.use(express.static('client/build'));
-
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  );
-}
-
 app.use('/api/portfolio', portfolioRoute);
+
+//serving the frontend
+app.use(express.static(path.join(__dirname, './client/build')));
+
+app.get('*', function (_, res) {
+  res.sendFile(
+    path.join(__dirname, './client/build/index.html'),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
 
 app.listen(port, () => {
   console.log(`Listening at port: ${port}`);
